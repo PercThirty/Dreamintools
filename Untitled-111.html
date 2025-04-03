@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamin - Boost Your Online Presence</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Banner Styling */
+        .banner {
+            width: 100%;
+            height: 200px; /* Increased height */
+            background-image: url('https://share.creavite.co/67eefbf671cd7c246f7c0a63.gif');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Added text shadow for better readability */
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #1a1a1a; /* Dark header */
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #4CAF50; /* Green hover color */
+        }
+
+        /* Main Content Styling */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-list li {
+            background-color: #2e2e2e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .service-list li:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .service-list h3 {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .service-list p {
+            font-size: 16px;
+            color: #bbb;
+        }
+
+        /* Order Form Styling */
+        .order-form {
+            background-color: #2e2e2e;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .order-form label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .order-form input, .order-form select, .order-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #444;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .order-form input:focus, .order-form select:focus, .order-form textarea:focus {
+            border-color: #9b59b6; /* Purple focus color */
+            outline: none;
+        }
+
+        .order-form button {
+            padding: 15px 25px;
+            background-color: #9b59b6; /* Purple button */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .order-form button:hover {
+            transform: scale(1.1); /* Button expands on hover */
+            background-color: #8e44ad; /* Darker purple on hover */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #1a1a1a; /* Dark footer */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+
+            .order-form {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        Dreamin - Boost Your Social Media Engagement Now!
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Dreamin</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#order">Place Order</a></li>
+                <li><a href="#services">Our Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Home Page Section -->
+        <section id="home">
+            <h2>Welcome to Dreamin</h2>
+            <p>Boost your social media presence and get the engagement you deserve. We offer various services to help you grow online. Choose your service below and place an order to get started!</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul class="service-list">
+                <li>
+                    <h3>YouTube</h3>
+                    <p>Likes, Comments, Subscribers, Views</p>
+                </li>
+                <li>
+                    <h3>Discord</h3>
+                    <p>Members, Server Boost, Community Engagement</p>
+                </li>
+                <li>
+                    <h3>Telegram</h3>
+                    <p>Group Growth and Engagement</p>
+                </li>
+                <li>
+                    <h3>Snapchat</h3>
+                    <p>Followers and Engagement</p>
+                </li>
+                <li>
+                    <h3>Twitch</h3>
+                    <p>Followers, Views, and Engagement</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Order Form Section -->
+        <section id="order">
+            <h2>Place Your Order</h2>
+            <form class="order-form" id="order-form">
+                <label for="service">Select Service</label>
+                <select id="service" name="service" required>
+                    <option value="1">YouTube</option>
+                    <option value="2">Discord</option>
+                    <option value="3">Telegram</option>
+                    <option value="4">Snapchat</option>
+                    <option value="5">Twitch</option>
+                </select>
+
+                <label for="link">Your Link</label>
+                <input type="url" id="link" name="link" placeholder="Enter the URL" required>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+
+                <label for="runs">Runs</label>
+                <input type="number" id="runs" name="runs" placeholder="Enter number of runs" required>
+
+                <label for="interval">Interval (in seconds)</label>
+                <input type="number" id="interval" name="interval" placeholder="Enter interval" required>
+
+                <label for="discordName">Your Discord Name</label>
+                <input type="text" id="discordName" name="discordName" placeholder="Add your Discord name" required />
+
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" placeholder="Add custom comments..."></textarea>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dreamin. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Interaction and Webhook -->
+    <script>
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Collect form data
+            const formData = new FormData(this);
+            const orderData = {
+                service: formData.get('service'),
+                link: formData.get('link'),
+                quantity: formData.get('quantity'),
+                runs: formData.get('runs'),
+                interval: formData.get('interval'),
+                discordName: formData.get('discordName'),
+                comments: formData.get('comments')
+            };
+
+            // Webhook URL (provided)
+            const webhookUrl = 'https://discordapp.com/api/webhooks/1357481006478790887/VvL40Mvp07-Twir4IwamjNcvzr11H38dsAbP7WwC4FhDXLVRCXqELnRH4Yf_0OFQlWuB';
+
+            // Prepare the payload
+            const payload = {
+                username: 'Dreamin Bot',
+                content: `New Order Received!`,
+                embeds: [
+                    {
+                        title: `Order Details`,
+                        fields: [
+                            { name: "Service", value: orderData.service, inline: true },
+                            { name: "Link", value: orderData.link, inline: true },
+                            { name: "Quantity", value: orderData.quantity, inline: true },
+                            { name: "Runs", value: orderData.runs, inline: true },
+                            { name: "Interval", value: orderData.interval, inline: true },
+                            { name: "Discord Name", value: orderData.discordName, inline: true },
+                            { name: "Comments", value: orderData.comments || 'No comments', inline: false },
+                        ],
+                        color: 16711680  // Red color
+                    }
+                ]
+            };
+
+            // Send data to webhook
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show success notification or message
+                alert('Order placed successfully! Your request is being processed.');
+                // Optionally reset the form
+                document.getElementById('order-form').reset();
+            })
+            .catch(error => {
+                console.error('Error sending order to webhook:', error);
+                alert('There was an error placing your order. Please try again later.');
+            });
+        });
+    </script>
+
+</body>
+</html>
